@@ -1,0 +1,148 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2e7d32;
+  background: #f4f9f4;
+}
+
+header {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #a5d6a7;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(90deg, #81c784, #c8e6c9);
+  color: #2e7d32;
+}
+
+.hero h2 span {
+  color: #388e3c;
+}
+
+.hero .cta-button {
+  padding: 15px 25px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.hero .cta-button:hover {
+  background: #388e3c;
+}
+
+.hero-animation img {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Info Sections */
+.info-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-grid img {
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-cards .card {
+  background: #f0f4f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-cards .card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+}

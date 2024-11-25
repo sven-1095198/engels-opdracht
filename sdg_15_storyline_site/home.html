@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groene Helden Ziekenhuis</title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/dse.png" alt="Leafy Mascot" class="mascot">
+      <h1>Groene Helden Ziekenhuis</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Over Ons</a></li>
+        <li><a href="#play">Speel & Leer</a></li>
+        <li><a href="#help">Hoe Jij Helpt</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Welkom bij het <span>Groene Helden Ziekenhuis</span>!</h2>
+        <p>Samen genezen we mensen én de planeet.</p>
+        <button class="cta-button" onclick="showGameAlert()">Speel Nu</button>
+      </div>
+      <div class="hero-animation">
+        <img src="images/dse.png" alt="Nature Illustration">
+      </div>
+    </section>
+
+    <section id="about" class="info-section">
+      <h2>Over Ons</h2>
+      <p>Het Groene Helden Ziekenhuis combineert zorg voor mensen met zorg voor de natuur. Bij ons groeit niet alleen gezondheid, maar ook bossen en biodiversiteit!</p>
+      <div class="image-grid">
+        <img src="hospital-green.png" alt="Groen ziekenhuis">
+        <img src="forest-care.png" alt="Bossen">
+      </div>
+    </section>
+
+    <section id="play" class="info-section">
+      <h2>Speel & Leer</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <h3>Bomenredder</h3>
+          <p>Plant bomen en red dieren terwijl je obstakels ontwijkt!</p>
+        </div>
+        <div class="card">
+          <h3>Blije Bijenrace</h3>
+          <p>Help een bij nectar verzamelen en bloemen bestuiven!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="help" class="info-section">
+      <h2>Hoe Jij Helpt</h2>
+      <p>Doe mee met onze natuurvriendelijke acties! Plant een boom, stuur je tekeningen in, of ontdek nieuwe manieren om de natuur te helpen.</p>
+    </section>
+
+    <section id="contact" class="info-section">
+      <h2>Contact</h2>
+      <p>Heb je vragen? Neem contact op via ons formulier.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Naam:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Bericht:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Groene Helden Ziekenhuis. Samen voor een betere toekomst!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
