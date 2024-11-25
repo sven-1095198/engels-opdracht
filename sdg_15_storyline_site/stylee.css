@@ -146,8 +146,9 @@ header nav ul li a:hover {
 }
 
 .story-icon img {
-  width: 50px;
-  height: 50px; /* Zorg ervoor dat de afbeelding een vaste grootte heeft */
+  width: 250px; /* Vergroot de breedte */
+  height: 200px; /* Vergroot de hoogte */
+  object-fit: contain; /* Zorg ervoor dat de afbeelding binnen de beschikbare ruimte past */
 }
 
 /* De h3 wordt boven de tekst geplaatst */
