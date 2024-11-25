@@ -90,8 +90,7 @@ header nav ul li a:hover {
   50% {
     transform: translateY(-10px);
   }
-}s
-
+}
 /* Info Sections */
 .info-section {
   padding: 40px 20px;
