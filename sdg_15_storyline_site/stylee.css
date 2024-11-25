@@ -1,10 +1,13 @@
 /* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   color: #2e7d32;
   background: #f4f9f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -84,17 +87,24 @@ header nav ul li a:hover {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
   }
 }
+
 /* Info Sections */
 .info-section {
   padding: 40px 20px;
   text-align: center;
+  flex: 1; /* Zorgt ervoor dat deze sectie de resterende ruimte inneemt */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Zorgt ervoor dat de content in een verticale flow blijft */
 }
 
 .info-section h2 {
@@ -107,36 +117,50 @@ header nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.image-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.info-section .story-content {
+  display: grid;
+  max-width: 1600px;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 20px; /* Ruimte tussen de kaarten */
+  margin-top: 20px;
 }
 
-
-.image-grid img {
-  width: 100px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.feature-cards .card {
-  background: #f0f4f8;
+/* Zorg ervoor dat de story-card flex is */
+.story-card {
+  display: flex; /* Flexbox gebruiken voor de uitlijning van afbeelding en tekst */
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s ease;
+  gap: 20px; /* Ruimte tussen de afbeelding en tekst */
 }
 
-.feature-cards .card:hover {
-  transform: scale(1.05);
+/* De afbeelding komt links van de tekst */
+.story-icon {
+  display: flex;
+  justify-content: center; /* Horizontaal centreren van de afbeelding */
+  align-items: center; /* Verticaal centreren van de afbeelding */
+  flex-shrink: 0; /* Zorg ervoor dat de afbeelding niet krimpt */
+}
+
+.story-icon img {
+  width: 50px;
+  height: 50px; /* Zorg ervoor dat de afbeelding een vaste grootte heeft */
+}
+
+/* De h3 wordt boven de tekst geplaatst */
+.story-card h3 {
+  font-size: 20px;
+  text-align: center; /* Titel gecentreerd boven de tekst */
+  margin-bottom: 10px; /* Ruimte tussen de titel en de tekst */
+  width: 100%; /* Zorg ervoor dat de titel de volledige breedte inneemt */
+}
+
+.story-card p {
+  text-align: left; /* Zorg ervoor dat de tekst naar links is uitgelijnd */
+  margin: 0; /* Verwijder extra marges tussen de tekst */
 }
 
 /* Footer */
@@ -145,4 +169,8 @@ footer {
   padding: 10px;
   background: #4caf50;
   color: white;
+}
+
+main {
+  flex: 1; /* Duwt de footer naar de onderkant */
 }
