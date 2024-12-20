@@ -175,3 +175,51 @@ footer {
 main {
   flex: 1; /* Duwt de footer naar de onderkant */
 }
+/* Quiz Section */
+.quiz-section {
+  padding: 40px 20px;
+  background: #e8f5e9;
+  text-align: center;
+}
+
+.quiz-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz-question label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.quiz-result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.cta-button {
+  padding: 15px 25px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #388e3c;
+}

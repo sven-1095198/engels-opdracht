@@ -3,23 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green hero hospital</title>
+    <title>Green Hero Hospital</title>
     <link rel="stylesheet" href="stylee.css" />
   </head>
   <body>
     <header>
       <div class="logo">
         <img src="dse.png" alt="Leafy Mascot" class="mascot" />
-        <h1>Green hero hospital</h1>
+        <h1>Green Hero Hospital</h1>
       </div>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
+          <li><button onclick="playMusic()" class="play-music-btn">Play Music</button></li>
+          <li><button onclick="stopMusic()" class="stop-music-btn">Stop Music</button></li>
         </ul>
       </nav>
     </header>
-
-
+    <audio id="myAudio">
+      <source src="muziek.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
     <main>
       <section id="home" class="hero">
         <div class="hero-content">
@@ -126,12 +130,89 @@
           </div>
         </div>
       </section>
+
+      <!-- Quiz Section -->
+      <section id="quiz" class="quiz-section">
+        <h2>Green Heroes Quiz</h2>
+        <form id="quizForm">
+          <!-- Question 1 -->
+          <div class="quiz-question">
+            <p>1. Who is the main character in the story?</p>
+            <label><input type="radio" name="q1" value="a" /> a) A little bird</label><br />
+            <label><input type="radio" name="q1" value="b" /> b) Leafy the tree</label><br />
+            <label><input type="radio" name="q1" value="c" /> c) The river</label>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="quiz-question">
+            <p>2. What is Leafy trying to protect?</p>
+            <label><input type="radio" name="q2" value="a" /> a) His home</label><br />
+            <label><input type="radio" name="q2" value="b" /> b) The forest and animals</label><br />
+            <label><input type="radio" name="q2" value="c" /> c) His friends' houses</label>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz-question">
+            <p>3. How does Leafy ask for help?</p>
+            <label><input type="radio" name="q3" value="a" /> a) He sends out magical seeds to children</label><br />
+            <label><input type="radio" name="q3" value="b" /> b) He shouts really loudly</label><br />
+            <label><input type="radio" name="q3" value="c" /> c) He builds a house for animals</label>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="quiz-question">
+            <p>4. What did the children do to help the forest?</p>
+            <label><input type="radio" name="q4" value="a" /> a) Played games</label><br />
+            <label><input type="radio" name="q4" value="b" /> b) Organized tree-planting and cleanup drives</label><br />
+            <label><input type="radio" name="q4" value="c" /> c) Watched movies</label>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="quiz-question">
+            <p>5. What was the big problem Leafy faced in Chapter 4?</p>
+            <label><input type="radio" name="q5" value="a" /> a) A new tree grew too tall</label><br />
+            <label><input type="radio" name="q5" value="b" /> b) A big storm was coming</label><br />
+            <label><input type="radio" name="q5" value="c" /> c) The animals were leaving</label>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="quiz-question">
+            <p>6. What did Leafy and the children do to save the river?</p>
+            <label><input type="radio" name="q6" value="a" /> a) They built a bridge</label><br />
+            <label><input type="radio" name="q6" value="b" /> b) They cleaned up the pollution</label><br />
+            <label><input type="radio" name="q6" value="c" /> c) They built a dam</label>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="quiz-question">
+            <p>7. How does the story end?</p>
+            <label><input type="radio" name="q7" value="a" /> a) The forest is destroyed</label><br />
+            <label><input type="radio" name="q7" value="b" /> b) The forest is saved, and everyone is happy</label><br />
+            <label><input type="radio" name="q7" value="c" /> c) Leafy leaves the forest</label>
+          </div>
+
+          <button type="submit" class="cta-button">Submit Quiz</button>
+        </form>
+        <div id="quizResult" class="quiz-result"></div>
+      </section>
     </main>
 
     <footer>
       <p>© 2024 Green Heroes Hospital. Together for a better future!</p>
     </footer>
 
+    <script>
+      function playMusic() {
+        var audio = document.getElementById('myAudio');
+        audio.play();
+      }
+
+      function stopMusic() {
+        var audio = document.getElementById('myAudio');
+        audio.pause();  // Pause the music
+        audio.currentTime = 0;  // Reset the music to the start
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
